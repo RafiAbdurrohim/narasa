@@ -115,6 +115,29 @@ export default function ExperienceDetail({ params }: { params: Promise<{ id: str
                 ))}
               </div>
             </section>
+
+            <section className="mb-16">
+              <h2 className="font-serif text-3xl font-bold mb-6 text-foreground">Lokasi & Titik Kumpul</h2>
+              <p className="text-foreground/80 font-medium mb-6 flex items-start gap-3 bg-primary/5 p-4 rounded-xl border border-primary/10">
+                <MapPin className="text-primary shrink-0 mt-0.5" /> 
+                <span>
+                  <strong className="block mb-1">Titik Kumpul: {exp.meetingPoint}</strong>
+                  Silakan datang 15 menit sebelum jadwal kegiatan dimulai. Panduan lebih lanjut akan dikirim via email setelah pemesanan.
+                </span>
+              </p>
+              <div className="w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg relative bg-black/5">
+                <iframe 
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(exp.meetingPoint + " Kampung Ketupat Samarinda")}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                ></iframe>
+              </div>
+            </section>
             
           </div>
 
