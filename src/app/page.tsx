@@ -9,16 +9,16 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden selection:bg-primary selection:text-white">
       {/* Editorial Navbar (Transparent/Minimal) */}
-      <nav className="absolute top-0 w-full z-50 pt-8 pb-4">
-        <div className="container mx-auto px-8 flex items-center justify-between">
+      <nav className="absolute top-0 w-full z-50 pt-6 md:pt-8 pb-4">
+        <div className="container mx-auto px-6 md:px-8 flex items-center justify-between">
           <div className="font-serif font-bold text-2xl tracking-tighter text-foreground">
             NARASA<span className="text-primary">.</span>
           </div>
-          <div className="hidden md:flex items-center gap-10 text-sm font-medium text-foreground/80">
-            <Link href="/explore" className="hover:text-primary transition-colors">Eksplorasi</Link>
-            <Link href="/provider" className="hover:text-primary transition-colors">Mitra</Link>
+          <div className="flex items-center gap-6 md:gap-10 text-sm font-medium text-foreground/80">
+            <Link href="/explore" className="hover:text-primary transition-colors hidden sm:block">Eksplorasi</Link>
+            <Link href="/provider" className="hover:text-primary transition-colors hidden sm:block">Mitra</Link>
             <Link href="/explore">
-              <span className="pb-1 border-b-2 border-foreground hover:border-primary transition-colors cursor-pointer">
+              <span className="pb-1 border-b-2 border-foreground hover:border-primary transition-colors cursor-pointer text-xs md:text-sm font-bold md:font-medium">
                 Pesan Sekarang
               </span>
             </Link>
@@ -27,23 +27,23 @@ export default function HomePage() {
       </nav>
 
       {/* Hero - Editorial & Cinematic */}
-      <section className="pt-32 lg:pt-40 pb-20 relative">
+      <section className="pt-28 md:pt-32 lg:pt-40 pb-16 md:pb-20 relative">
         <div className="container mx-auto px-4 md:px-8">
           
-          <div className="text-center max-w-5xl mx-auto mb-16">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <span className="h-[1px] w-8 bg-primary"></span>
-              <span className="text-primary font-medium tracking-widest text-xs uppercase">Muslim-Friendly Local Experience</span>
-              <span className="h-[1px] w-8 bg-primary"></span>
+          <div className="text-center max-w-5xl mx-auto mb-12 md:mb-16">
+            <div className="flex items-center justify-center gap-2 mb-4 md:mb-6">
+              <span className="h-[1px] w-6 md:w-8 bg-primary"></span>
+              <span className="text-primary font-bold md:font-medium tracking-widest text-[10px] md:text-xs uppercase">Muslim-Friendly Local Experience</span>
+              <span className="h-[1px] w-6 md:w-8 bg-primary"></span>
             </div>
-            <h1 className="font-serif text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] leading-[0.9] tracking-tight text-foreground">
+            <h1 className="font-serif text-5xl sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] leading-[1.1] md:leading-[0.9] tracking-tight text-foreground">
               Kampung Ketupat.<br />
               <span className="text-primary italic font-light">Soul of Local.</span>
             </h1>
           </div>
 
           {/* Panoramic Hero Image */}
-          <div className="w-full h-[50vh] md:h-[65vh] rounded-[2rem] overflow-hidden relative group">
+          <div className="w-full h-[40vh] sm:h-[50vh] md:h-[65vh] rounded-[2rem] overflow-hidden relative group">
             <img 
               src="https://metroikn.co/wp-content/uploads/2025/09/Kampung-Ketupat.jpg" 
               alt="Kampung Ketupat Landscape" 
@@ -52,15 +52,15 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/20" />
             
             {/* Floating Glassmorphism Booking Bar */}
-            <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-[90%] md:w-[600px] bg-white/80 backdrop-blur-xl p-3 rounded-full shadow-2xl flex items-center justify-between border border-white/50">
-              <div className="pl-6 flex items-center gap-3 text-foreground/60 font-medium">
-                <Compass size={20} className="text-primary" />
+            <div className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 w-[92%] sm:w-[80%] md:w-[600px] bg-white/90 md:bg-white/80 backdrop-blur-xl p-2 md:p-3 rounded-full shadow-2xl flex items-center justify-between border border-white/50">
+              <div className="pl-4 md:pl-6 flex items-center gap-2 md:gap-3 text-foreground/60 font-medium text-sm md:text-base">
+                <Compass size={18} className="text-primary shrink-0" />
                 <span className="hidden sm:inline">Temukan pengalaman berkesan...</span>
-                <span className="sm:hidden">Temukan pengalaman...</span>
+                <span className="sm:hidden text-xs">Cari pengalaman...</span>
               </div>
               <Link href="/explore">
-                <Button variant="primary" className="rounded-full px-8 h-12 shadow-lg shadow-cta/20 font-bold">
-                  Mulai Jelajah
+                <Button variant="primary" className="rounded-full px-5 md:px-8 h-10 md:h-12 shadow-lg shadow-cta/20 font-bold text-xs md:text-sm">
+                  Jelajah
                 </Button>
               </Link>
             </div>
