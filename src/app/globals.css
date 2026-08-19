@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FAF5; /* Soft Off-White */
+  --foreground: #17221E; /* Deep Charcoal */
+  
+  /* NARASA Brand Colors */
+  --color-primary: #008F6B; /* Emerald Green */
+  --color-cta: #FF7A3D;     /* Tropical Orange */
+  --color-yellow: #FFC83D;  /* Bright Yellow */
+  --color-blue: #36B9E9;    /* Sky Blue */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  --color-primary: var(--color-primary);
+  --color-cta: var(--color-cta);
+  --color-yellow: var(--color-yellow);
+  --color-blue: var(--color-blue);
+  
+  /* Using Inter / sans-serif for modern look */
+  --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Woven/Ketupat Pattern for specific backgrounds */
+.bg-pattern-ketupat {
+  background-image: radial-gradient(var(--color-primary) 0.5px, transparent 0.5px), radial-gradient(var(--color-primary) 0.5px, var(--background) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
 }
