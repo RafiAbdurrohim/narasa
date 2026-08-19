@@ -226,6 +226,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Location Map Section */}
+      <section className="py-24 bg-background relative">
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="h-[1px] w-8 bg-primary"></span>
+                <span className="text-primary font-bold tracking-widest text-xs uppercase">Lokasi Kami</span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-foreground">Kunjungi Pusat<br/>Budaya Kami.</h2>
+              <p className="text-lg text-foreground/70 mb-8 font-medium leading-relaxed">
+                Semua pengalaman otentik NARASA berpusat di kawasan cagar budaya <strong>Kampung Ketupat, Samarinda Seberang</strong>. Nikmati akses mudah dari pusat kota dengan pemandangan langsung ke pesona Sungai Mahakam.
+              </p>
+              
+              <div className="bg-white border border-black/5 shadow-sm p-6 rounded-2xl flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <MapPin size={24}/>
+                </div>
+                <div>
+                  <div className="font-bold text-lg text-foreground mb-1">Kawasan Wisata Kampung Ketupat</div>
+                  <div className="text-sm font-medium text-foreground/60 leading-relaxed">
+                    Jl. Mangkupelas, Mesjid, Kec. Samarinda Seberang,<br/> Kota Samarinda, Kalimantan Timur 75133
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="w-full lg:w-[500px] xl:w-[600px] shrink-0">
+              <div className="w-full h-[400px] md:h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white relative bg-black/5">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Kampung+Ketupat+Samarinda+Seberang&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call To Action / Register */}
       <section className="py-32 bg-white relative overflow-hidden border-t border-black/5">
         <div className="absolute inset-0 bg-pattern-ketupat opacity-[0.02] pointer-events-none" />
