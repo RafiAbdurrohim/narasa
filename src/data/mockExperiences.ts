@@ -29,7 +29,7 @@ export const experiences: Experience[] = [
     rating: 4.8,
     reviews: 42,
     isMuslimFriendly: true,
-    image: "https://metroikn.co/wp-content/uploads/2025/09/Kampung-Ketupat.jpg",
+    image: "https://www.kutairaya.com/newsphoto/20250811tempat.jpeg",
     provider: { name: "Abah Rahman" },
     meetingPoint: "Gapura Utama Kampung Ketupat",
     included: ["Local Guide", "Air Mineral", "Sumbangan Masjid"],
