@@ -20,6 +20,72 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "p1",
+    title: "NARASA Discover",
+    description: "Langkah awal mengenal Kampung Ketupat. Jelajahi sudut-sudut kampung bersama pemandu lokal sambil mendengar cerita dan sejarah singkat di baliknya.",
+    category: "Heritage",
+    duration: "1.5 Jam",
+    price: 40000,
+    rating: 4.7,
+    reviews: 18,
+    isMuslimFriendly: true,
+    image: "https://www.indonesia.travel/contentassets/ec44797b4af641779299983bb1829630/kampung-ketupat-kalimantan-timur-wisata-kuliner-unik.jpg",
+    provider: { name: "NARASA" },
+    meetingPoint: "Gapura Utama Kampung Ketupat",
+    included: ["Pengalaman dengan pemandu lokal", "Eksplorasi Kampung Ketupat", "Pengenalan budaya & cerita lokal"],
+    itinerary: [
+      { time: "09:00", activity: "Kumpul di Gapura Utama" },
+      { time: "09:15", activity: "Eksplorasi Kampung Ketupat bersama pemandu" },
+      { time: "10:15", activity: "Pengenalan budaya & cerita lokal" },
+      { time: "10:30", activity: "Selesai" }
+    ]
+  },
+  {
+    id: "p2",
+    title: "NARASA Experience",
+    description: "Paket inti NARASA — kombinasi jelajah budaya, praktik langsung membuat kerajinan ketupat, dan cicip kuliner lokal dalam satu rencana perjalanan yang sudah dikurasi.",
+    category: "Culture",
+    duration: "3 Jam",
+    price: 90000,
+    rating: 4.9,
+    reviews: 55,
+    isMuslimFriendly: true,
+    image: "https://asset.tribunnews.com/QySuwLvVAPtI5KXU9vkG9If9jq4=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/banjarmasin/foto/bank/originals/anyaman-ketupat-dari-daun-nipahsafas.jpg",
+    provider: { name: "NARASA" },
+    meetingPoint: "Gapura Utama Kampung Ketupat",
+    included: ["Pengalaman dengan pemandu lokal", "Rencana perjalanan terkurasi", "Kegiatan membuat kerajinan ketupat", "Mencicipi kuliner lokal", "Informasi ramah Muslim"],
+    itinerary: [
+      { time: "09:00", activity: "Kumpul & pengenalan rencana perjalanan" },
+      { time: "09:30", activity: "Jelajah budaya bersama pemandu lokal" },
+      { time: "10:30", activity: "Kegiatan membuat kerajinan ketupat" },
+      { time: "11:30", activity: "Mencicipi kuliner lokal" },
+      { time: "12:00", activity: "Selesai" }
+    ]
+  },
+  {
+    id: "p3",
+    title: "NARASA Signature",
+    description: "Perjalanan lengkap ala lokal — dari tur warisan budaya, workshop kerajinan, kuliner otentik, hingga souvenir khas untuk kenang-kenangan.",
+    category: "Culture",
+    duration: "5 Jam",
+    price: 145000,
+    rating: 5.0,
+    reviews: 9,
+    isMuslimFriendly: true,
+    image: "https://www.kutairaya.com/newsphoto/20250811tempat.jpeg",
+    provider: { name: "NARASA" },
+    meetingPoint: "Gapura Utama Kampung Ketupat",
+    included: ["Tur warisan budaya bersama pemandu", "Kegiatan membuat kerajinan ketupat", "Pengalaman mencicipi kuliner lokal", "Souvenir khas lokal", "Informasi ramah Muslim", "Penuturan cerita budaya"],
+    itinerary: [
+      { time: "09:00", activity: "Kumpul & Sambutan" },
+      { time: "09:15", activity: "Tur warisan budaya bersama pemandu" },
+      { time: "10:30", activity: "Workshop kerajinan ketupat" },
+      { time: "12:00", activity: "Mencicipi kuliner lokal" },
+      { time: "13:00", activity: "Penuturan cerita budaya & pembagian souvenir" },
+      { time: "14:00", activity: "Selesai" }
+    ]
+  },
+  {
     id: "e1",
     title: "Jelajah Sejarah Kampung Ketupat",
     description: "Temukan jejak sejarah dan nilai-nilai luhur di balik Kampung Ketupat. Tur jalan kaki yang menenangkan menyusuri peninggalan budaya lokal.",
